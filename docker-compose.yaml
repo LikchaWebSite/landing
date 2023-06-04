@@ -11,7 +11,7 @@ services:
   nginx:
     build:
       context: ./nginx
-    profiles:
-      - server
     depends_on:
       - fe-app
+    profiles:
+      - server
