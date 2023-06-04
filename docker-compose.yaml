@@ -1,0 +1,17 @@
+services:
+  fe-app:
+    image: node:18-alpine
+    working_dir: /app
+    entrypoint:
+      - node
+      - .output/server/index.mjs
+    ports:
+      - 3000:3000
+    build: .
+  nginx:
+    build:
+      context: ./nginx
+    profiles:
+      - server
+    depends_on:
+      - fe-app

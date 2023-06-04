@@ -9,8 +9,15 @@
     "start": "nuxt start",
     "postinstall": "nuxt prepare"
   },
-  "devDependencies": {
-    "@types/node": "^18",
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.5",
+    "pinia": "^2.1.3",
     "nuxt": "^3.5.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18"
+  },
+  "overrides": {
+    "vue": "latest"
   }
 }
