@@ -1,0 +1,54 @@
+.button {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 0;
+  border: 1px solid;
+  text-align: center;
+  box-shadow: none;
+  background-color: transparent;
+  font-size: 16px;
+  padding: 1.1em;
+  width: 100%;
+  font-weight: 700px;
+  z-index: 1;
+  text-transform: uppercase;
+  color: var(--color);
+  border-color: var(--color);
+  max-width: 360px;
+  transition: color .25s ease-in-out;
+}
+
+.button::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 1px);
+  background-color: var(--color);
+  transition: transform .25s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: right;
+  z-index: -1;
+}
+
+.button:hover {
+  color: var(--alt-color);
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.button.white {
+  --color: var(--white);
+  --alt-color: var(--black);
+}
+
+.button.black {
+  --color: var(--black);
+  --alt-color: var(--white);
+}

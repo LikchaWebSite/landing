@@ -1,0 +1,18 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  padding-top: 33px;
+  padding-bottom: 33px;
+}
+
+.navigation {
+  margin-left: auto;
+}

@@ -1,0 +1,14 @@
+.title {
+  font-size: 70px;
+  composes: title from "/assets/styles/common.css";
+
+  color: var(--color);
+}
+
+.title.white {
+  --color: var(--white);
+}
+
+.title.black {
+  --color: var(--black);
+}

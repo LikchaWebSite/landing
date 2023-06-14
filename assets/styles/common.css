@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #f5f5f5;
+}
+
+a {
+  color: inherit;
+}
+
+.title {
+  font-family: 'Obrazec 2.0', sans-serif;
+}

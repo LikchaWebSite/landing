@@ -1,5 +1,7 @@
 <template>
-  <h1>
-    Привет!
-  </h1>
+  <Hero />
 </template>
+
+<script setup lang="ts">
+import Hero from '@/components/pages/index/hero/index.vue'
+</script>

@@ -1,0 +1,34 @@
+.list {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 50px;
+}
+
+.link {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 500;
+  padding: 5px 0;
+}
+
+.link::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--white);
+  transition: transform .25s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.link:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
