@@ -1,0 +1,13 @@
+.section {
+  padding: 180px 0 120px;
+}
+
+.title {
+  margin-bottom: 50px;
+}
+
+.servicesList {
+  display: grid;
+  gap: 60px;
+  grid-template-columns: repeat(3, 1fr);
+}

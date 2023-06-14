@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 10px;
+  background-color: var(--grey);
+  height: 100%;
+}
+
+.picture {
+  display: block;
+}
+
+.pictureImage {
+  object-fit: cover;
+}
+
+.title {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+  padding-right: 10px;
+}
+
+.price {
+  margin-top: auto;
+  font-size: 16px;
+}
+
+.button {
+  font-size: 16px;
+}

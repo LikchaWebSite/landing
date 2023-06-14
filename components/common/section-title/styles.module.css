@@ -1,8 +1,12 @@
 .title {
-  font-size: 70px;
   composes: title from "/assets/styles/common.css";
-
+  font-size: 70px;
   color: var(--color);
+}
+
+.title.center {
+  text-align: center;
+  width: 100%;
 }
 
 .title.white {
