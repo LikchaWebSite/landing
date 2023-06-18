@@ -1,0 +1,18 @@
+.container {
+  display: grid;
+  gap: 25px;
+  align-content: start;
+}
+
+.title {
+  color: var(--black);
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.value > * {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 140%;
+}

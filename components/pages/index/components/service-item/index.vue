@@ -1,15 +1,12 @@
 <template>
   <article :class="$style.container">
-    <picture :class="$style.picture">
-      <source
-        :srcset="img.webp"
-        type="image/webp"
-      >
-      <img
-        :src="img.img"
-        :alt="title"
-      >
-    </picture>
+    <NuxtPicture
+      :src="img"
+      :alt="title"
+      loading="lazy"
+      format="webp"
+      legacy-format="jpg"
+    />
 
     <h3 :class="$style.title">
       {{ title }}
@@ -34,12 +31,11 @@
 </template>
 
 <script setup lang="ts">
-import { ImageWithSources } from '@/helpers/types'
 import { pluralizeWithCount } from '@/helpers/pluralize'
 import Button from '@/components/common/button/link.vue'
 
 export type ServiceItem = {
-  img: ImageWithSources
+  img: string
   title: string
   description: string
   duration: number

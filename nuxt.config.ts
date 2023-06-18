@@ -1,6 +1,12 @@
 export default defineNuxtConfig({
   ssr: true,
+  runtimeConfig: {
+    public: {
+      mapUrl: process.env.MAP_URL,
+    },
+  },
   modules: [
+    '@nuxt/image',
     '@pinia/nuxt',
     '@nuxtjs/eslint-module',
   ],
@@ -10,4 +16,7 @@ export default defineNuxtConfig({
     '@/assets/styles/variables.css',
     '@/assets/styles/common.css',
   ],
+  image: {
+    dir: 'assets/images'
+  },
 })
