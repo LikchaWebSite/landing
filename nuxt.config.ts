@@ -1,3 +1,8 @@
+const customTags = [
+  'swiper-container',
+  'swiper-slide',
+]
+
 export default defineNuxtConfig({
   ssr: true,
   runtimeConfig: {
@@ -19,4 +24,9 @@ export default defineNuxtConfig({
   image: {
     dir: 'assets/images'
   },
+  vue: {
+    compilerOptions: {
+      isCustomElement: (tag) => customTags.includes(tag)
+    }
+  }
 })

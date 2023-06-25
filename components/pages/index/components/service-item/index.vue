@@ -4,6 +4,7 @@
       :src="img"
       :alt="title"
       loading="lazy"
+      fit="cover"
       format="webp"
       legacy-format="jpg"
     />

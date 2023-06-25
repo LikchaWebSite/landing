@@ -5,8 +5,14 @@
     :services="services"
   />
   <About id="about" />
-  <Gallery id="gallery" />
-  <Portfolio id="portfolio" />
+  <Gallery
+    id="gallery"
+    :images="gallery"
+  />
+  <Portfolio
+    id="portfolio"
+    :images="portfolio"
+  />
   <Contacts
     id="contacts"
     :items="contacts"
@@ -72,6 +78,21 @@ const services: ServiceItem[] = [
     price: 1500,
     href: '',
   },
+]
+
+const gallery = [
+  'gallery/1.webp',
+  'gallery/2.webp',
+  'gallery/3.webp',
+  'gallery/4.webp',
+]
+
+const portfolio = [
+  'portfolio/1.jpg',
+  'portfolio/2.jpg',
+  'portfolio/3.jpg',
+  'portfolio/4.jpg',
+  'portfolio/5.jpg',
 ]
 
 const contacts: ContactItem[] = [

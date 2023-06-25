@@ -5,8 +5,10 @@
         <div :class="$style.side">
           <NuxtPicture
             src="about/profile.webp"
+            fit="cover"
             format="webp"
             width="315px"
+            loading="lazy"
             :class="$style.image"
             legacy-format="jpg"
           />
