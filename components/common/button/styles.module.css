@@ -1,6 +1,6 @@
 .button {
   position: relative;
-  display: inline-block;
+  display: block;
   text-decoration: none;
   border-radius: 0;
   border: 1px solid;
@@ -9,13 +9,11 @@
   background-color: transparent;
   font-size: 16px;
   padding: 1.1em;
-  width: 100%;
   font-weight: 400;
   z-index: 1;
   text-transform: uppercase;
   color: var(--color);
   border-color: var(--color);
-  max-width: 360px;
   transition: color .25s ease-in-out;
 }
 

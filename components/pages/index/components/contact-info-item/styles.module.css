@@ -16,3 +16,13 @@
   font-size: 16px;
   line-height: 140%;
 }
+
+@media screen and (width <= 768px) {
+  .container {
+    gap: 15px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+}

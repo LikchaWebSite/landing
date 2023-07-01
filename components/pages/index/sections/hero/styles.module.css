@@ -2,7 +2,13 @@
   min-height: 100vh;
   background-image: url('@/assets/images/hero_bg.webp');
   background-size: cover;
+  background-position: center;
   padding-top: 13%;
+  display: grid;
+}
+
+.container {
+  position: relative;
 }
 
 .content {
@@ -32,4 +38,46 @@
   color: var(--white);
   font-size: 26px;
   margin-bottom: 70px;
+}
+
+.mark {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  transform: translateY(50%);
+}
+
+.button {
+  max-width: 360px;
+  width: 100%;
+}
+
+@media screen and (width <= 768px) {
+  .hero {
+    padding-top: 160px;
+  }
+
+  .content {
+    align-items: center;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 120px;
+  }
+
+  .subtitle {
+    text-align: center;
+  }
+}
+
+@media screen and (width <= 450px) {
+  .title {
+    font-size: 80px;
+    margin-bottom: 25px;
+  }
+
+  .subtitle {
+    font-size: 22px;
+  }
 }

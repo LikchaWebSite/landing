@@ -5,7 +5,7 @@
         center
         :class="$style.title"
       >
-        Обстановка
+        {{ title }}
       </SectionTitle>
 
       <swiper-container ref="swiper">
@@ -15,8 +15,8 @@
         >
           <NuxtImg
             :src="image"
+            :class="$style.image"
             loading="lazy"
-            :height="350"
           />
         </swiper-slide>
       </swiper-container>
@@ -29,17 +29,18 @@ import { SwiperOptions } from 'swiper'
 import SectionTitle from '@/components/common/section-title/index.vue'
 import Container from '@/components/common/container/index.vue'
 
-defineProps<{
+const props = defineProps<{
+  title: string
   images: string[]
+  swiperOptions: SwiperOptions
 }>()
 
 const swiper = ref(null)
 
-const swiperParams: SwiperOptions = {
-  slidesPerView: 4,
+const localSwiperOptions: SwiperOptions = {
+  ...props.swiperOptions,
   mousewheel: true,
   grabCursor: true,
-  spaceBetween: 50,
 }
 
 onMounted(() => {
@@ -47,7 +48,7 @@ onMounted(() => {
     return
   }
 
-  Object.assign(swiper.value, swiperParams)
+  Object.assign(swiper.value, localSwiperOptions)
 
   // @ts-expect-error
   swiper.value?.initialize()

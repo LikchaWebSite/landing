@@ -1,12 +1,10 @@
 <template>
   <article :class="$style.container">
-    <NuxtPicture
+    <NuxtImg
       :src="img"
       :alt="title"
       loading="lazy"
       fit="cover"
-      format="webp"
-      legacy-format="jpg"
     />
 
     <h3 :class="$style.title">

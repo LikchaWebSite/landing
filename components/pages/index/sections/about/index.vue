@@ -3,14 +3,11 @@
     <Container>
       <div :class="$style.wrapper">
         <div :class="$style.side">
-          <NuxtPicture
+          <NuxtImg
             src="about/profile.webp"
             fit="cover"
-            format="webp"
-            width="315px"
             loading="lazy"
             :class="$style.image"
-            legacy-format="jpg"
           />
         </div>
         <div :class="$style.side">

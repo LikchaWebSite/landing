@@ -16,3 +16,9 @@
 .title.black {
   --color: var(--black);
 }
+
+@media screen and (width <= 1100px) {
+  .title {
+    font-size: 60px;
+  }
+}

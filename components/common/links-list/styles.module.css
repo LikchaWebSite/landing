@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 25px;
+}
+
+.item {
+  position: relative;
+}
+
+.itemMarked::after {
+  content: '*';
+  line-height: 8px;
+  position: absolute;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--white);
+  bottom: 90%;
+  left: 100%;
+}
+
+.link {
+  display: block;
+}
+
+.icon {
+  --size: 30px;
+
+  height: var(--size);
+  width: var(--size);
+}

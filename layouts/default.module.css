@@ -1,5 +1,14 @@
 .layout {
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
+}
+
+.header,
+.footer {
+  flex-shrink: 1;
+}
+
+.main {
+  flex-grow: 1;
 }

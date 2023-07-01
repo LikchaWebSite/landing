@@ -1,4 +1,4 @@
-.section {
+.wrapper {
   display: flex;
   min-height: 520px;
 }
@@ -19,8 +19,9 @@
   padding-bottom: 50px;
 }
 
-.title {
-  margin-bottom: 60px;
+.title.outer {
+  display: none;
+  margin-bottom: 35px;
 }
 
 .contactsList {
@@ -28,4 +29,45 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
   width: 100%;
+}
+
+@media screen and (width <= 768px) {
+  .wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .title.outer {
+    display: block;
+  }
+  
+  .title.inner {
+    display: none;
+  }
+
+  .contentWrapper,
+  .mapWrapper {
+    flex: 1 1 auto;
+  }
+
+  .mapWrapper {
+    display: grid;
+    min-height: 80vw;
+    transform: translateX(0);
+  }
+
+  .content {
+    max-width: 100%;
+    padding: 50px 0 100px;
+  }
+}
+
+@media screen and (width <= 425px) {
+  .mapWrapper {
+    min-height: 115vw;
+  }
+
+  .contactsList {
+    gap: 25px;
+    grid-template-columns: 1fr;
+  }
 }

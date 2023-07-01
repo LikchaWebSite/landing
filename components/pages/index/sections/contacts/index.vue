@@ -1,36 +1,53 @@
 <template>
   <section :class="$style.section">
-    <div :class="$style.contentWrapper">
-      <Container>
-        <div :class="$style.content">
-          <SectionTitle>
-            Контакты
-          </SectionTitle>
+    <SectionTitle
+      center
+      :class="[
+        $style.title,
+        $style.outer,
+      ]"
+    >
+      Контакты
+    </SectionTitle>
 
-          <div :class="$style.contactsList">
-            <ContactInfoItem 
-              v-for="item in items"
-              :key="item.title"
-              :title="item.title"
+    <div :class="$style.wrapper">
+      <div :class="$style.contentWrapper">
+        <Container>
+          <div :class="$style.content">
+            <SectionTitle
+              :class="[
+                $style.title,
+                $style.inner,
+              ]"
             >
-              <span v-if="!item.value.href">
-                {{ item.value.text }}
-              </span>
-              <a
-                :href="item.value.href"
-                v-else
+              Контакты
+            </SectionTitle>
+
+            <div :class="$style.contactsList">
+              <ContactInfoItem 
+                v-for="item in items"
+                :key="item.title"
+                :title="item.title"
               >
-                {{ item.value.text }}
-              </a>
-            </ContactInfoItem>
+                <span v-if="!item.value.href">
+                  {{ item.value.text }}
+                </span>
+                <a
+                  :href="item.value.href"
+                  v-else
+                >
+                  {{ item.value.text }}
+                </a>
+              </ContactInfoItem>
+            </div>
           </div>
-        </div>
-      </Container>
-    </div>
-    <div :class="$style.mapWrapper">
-      <ClientOnly>
-        <MapScript />
-      </ClientOnly>
+        </Container>
+      </div>
+      <div :class="$style.mapWrapper">
+        <ClientOnly>
+          <MapScript />
+        </ClientOnly>
+      </div>
     </div>
   </section>
 </template>

@@ -1,0 +1,1 @@
+export const WIDTH_SYMBOL = Symbol('Provide width symbol')

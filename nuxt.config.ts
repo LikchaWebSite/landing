@@ -1,3 +1,5 @@
+import { fileURLToPath } from 'url'
+
 const customTags = [
   'swiper-container',
   'swiper-slide',
@@ -9,6 +11,9 @@ export default defineNuxtConfig({
     public: {
       mapUrl: process.env.MAP_URL,
     },
+  },
+  alias: {
+    'images': fileURLToPath(new URL('./assets/images', import.meta.url)),
   },
   modules: [
     '@nuxt/image',

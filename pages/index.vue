@@ -1,17 +1,25 @@
 <template>
-  <Hero id="hero" />
+  <Hero
+    id="hero"
+  />
   <Services
     id="services"
     :services="services"
   />
-  <About id="about" />
+  <About
+    id="about"
+  />
   <Gallery
     id="gallery"
     :images="gallery"
+    title="Обстановка"
+    :swiper-options="gallerySwiperOptions"
   />
-  <Portfolio
+  <Gallery
     id="portfolio"
+    title="Портфолио"
     :images="portfolio"
+    :swiper-options="portfolioSwiperOptions"
   />
   <Contacts
     id="contacts"
@@ -24,10 +32,16 @@ import Hero from '@/components/pages/index/sections/hero/index.vue'
 import Services from '@/components/pages/index/sections/services/index.vue'
 import About from '@/components/pages/index/sections/about/index.vue'
 import Gallery from '@/components/pages/index/sections/gallery/index.vue'
-import Portfolio from '@/components/pages/index/sections/portfolio/index.vue'
 import Contacts from '@/components/pages/index/sections/contacts/index.vue'
 import { ServiceItem } from '~/components/pages/index/components/service-item/index.vue'
-import { ContactItem } from '~/components/pages/index/components/contact-info-item/index.vue'
+import { ContactItem } from '@/components/pages/index/components/contact-info-item/index.vue'
+import { useWindowWidth } from '~/composables/use-window-width'
+import { WIDTH_SYMBOL } from '~/shared/constants/provide-symbols'
+import { SwiperOptions } from 'swiper'
+
+const { width } = useWindowWidth()
+
+provide(WIDTH_SYMBOL, width)
 
 const services: ServiceItem[] = [
   {
@@ -116,4 +130,50 @@ const contacts: ContactItem[] = [
     },
   },
 ]
+
+const gallerySwiperOptions: SwiperOptions = {
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 15,
+    },
+    400: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    600: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 25,
+    },
+  }
+}
+
+const portfolioSwiperOptions: SwiperOptions = {
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 15,
+    },
+    400: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    500: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 25,
+    },
+    1280: {
+      slidesPerView: 5,
+      spaceBetween: 50,
+    }
+  }
+}
 </script>

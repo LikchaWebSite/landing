@@ -1,12 +1,19 @@
 <template>
   <div :class="$style.layout">
-    <Header :menu-items="menuItems" />
+    <Header
+      :menu-items="menuItems"
+      :links="headerLinks"
+      :class="$style.header"
+    />
 
-    <main>
+    <main :class="$style.main">
       <NuxtPage />
     </main>
 
-    <Footer />
+    <Footer
+      :links="footerLinks"
+      :class="$style.footer"
+    />
   </div>
 </template>
 
@@ -14,6 +21,7 @@
 import Header from '@/components/common/header/index.vue'
 import Footer from '@/components/common/footer/index.vue'
 import { MenuItem } from '@/components/common/navigation/index.vue'
+import { LinkItem } from '@/components/common/links-list/index.vue'
 
 const menuItems: MenuItem[] = [
   {
@@ -35,6 +43,30 @@ const menuItems: MenuItem[] = [
   {
     label: 'Контакты',
     link: '',
+  },
+]
+
+const headerLinks: LinkItem[] = [
+  {
+    url: '',
+    icon: 'instagram',
+    isMarked: true,
+  },
+  {
+    url: '',
+    icon: 'map',
+  },
+]
+
+const footerLinks: LinkItem[] = [
+  {
+    url: '',
+    icon: 'telegram',
+  },
+  {
+    url: '',
+    icon: 'instagram',
+    isMarked: true,
   },
 ]
 </script>
