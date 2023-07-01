@@ -27,7 +27,8 @@ export default defineNuxtConfig({
     '@/assets/styles/common.css',
   ],
   image: {
-    dir: 'assets/images'
+    dir: 'public/images',
+    provider: 'ipx'
   },
   vue: {
     compilerOptions: {

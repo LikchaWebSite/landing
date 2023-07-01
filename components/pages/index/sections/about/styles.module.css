@@ -1,6 +1,6 @@
 .section {
   padding: 120px 0;
-  background-image: url('@/assets/images/about/about_bg.webp');
+  background-image: url('@/assets/images/about_bg.webp');
   background-size: cover;
 }
 
