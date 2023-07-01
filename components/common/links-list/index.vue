@@ -5,14 +5,17 @@
       :key="link.url"
       :class="[
         $style.item,
-        link.isMarked && $style.itemMarked,
+        link.isMarked && $style.marked,
+        theme === 'dark' && $style.dark,
       ]"
     >
       <a
         :href="link.url"
         :class="$style.link"
       >
-        <Icon :icon="link.icon" />
+        <Icon
+          :icon="link.icon"
+        />
       </a>
     </li>
   </ul>
@@ -20,6 +23,9 @@
 
 <script setup lang="ts">
 import Icon, { Variant } from '@/components/common/icon/index.vue'
+import { THEME_SYMBOL } from '~/shared/constants/provide-symbols'
+
+const theme = inject(THEME_SYMBOL, 'light')
 
 export type LinkItem = {
   url: string

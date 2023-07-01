@@ -52,6 +52,12 @@
   width: 100%;
 }
 
+@media screen and (height <= 400px) {
+  .hero {
+    padding-bottom: 40px;
+  }
+}
+
 @media screen and (width <= 768px) {
   .hero {
     padding-top: 160px;

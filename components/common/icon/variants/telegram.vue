@@ -6,7 +6,7 @@
     fill-rule="nonzero"
     :height="size"
     :width="size"
-    :fill="color"
+    fill="currentColor"
   >
     <g
       fill-rule="nonzero"

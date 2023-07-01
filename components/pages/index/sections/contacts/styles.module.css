@@ -12,6 +12,10 @@
   transform: translateX(-100%);
 }
 
+.mapWrapper iframe {
+  height: 100%;
+}
+
 .content {
   max-width: 50%;
   display: grid;
@@ -50,6 +54,7 @@
   }
 
   .mapWrapper {
+    overflow: hidden;
     display: grid;
     min-height: 80vw;
     transform: translateX(0);

@@ -1,16 +1,19 @@
 <template>
-  <div>
-    <IconVariant
-      :size="size"
-      :color="color"
-    />
-  </div>
+  <IconVariant
+    :size="size"
+    :style="{
+      color: resultColor,
+    }"
+  />
 </template>
 
 <script setup lang="ts">
 import { defineAsyncComponent } from 'vue'
+import { THEME_SYMBOL } from '~/shared/constants/provide-symbols'
 
-export type Variant = 'instagram' | 'telegram' | 'map'
+export type Variant = 'instagram' | 'telegram' | 'map' | 'burger' | 'cross' | 'spa'
+
+const theme = inject(THEME_SYMBOL, '#ffffff')
 
 type Props = {
   icon: Variant
@@ -19,11 +22,15 @@ type Props = {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  color: '#ffffff',
+  color: undefined,
   size: 30,
 })
 
 const IconVariant = defineAsyncComponent(() => {
   return import(`./variants/${props.icon}.vue`)
+})
+
+const resultColor = computed(() => {
+  return props.color ?? (theme === 'dark' ? '#000000' : '#ffffff')
 })
 </script>

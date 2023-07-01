@@ -8,7 +8,10 @@
         {{ title }}
       </SectionTitle>
 
-      <swiper-container ref="swiper">
+      <swiper-container
+        ref="swiper"
+        :class="$style.swiper"
+      >
         <swiper-slide
           v-for="image in images"
           :key="image"
@@ -41,6 +44,7 @@ const localSwiperOptions: SwiperOptions = {
   ...props.swiperOptions,
   mousewheel: true,
   grabCursor: true,
+  pagination: true,
 }
 
 onMounted(() => {

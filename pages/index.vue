@@ -41,7 +41,7 @@ import { SwiperOptions } from 'swiper'
 
 const { width } = useWindowWidth()
 
-provide(WIDTH_SYMBOL, width)
+provide(WIDTH_SYMBOL, width.value)
 
 const services: ServiceItem[] = [
   {
@@ -155,12 +155,11 @@ const gallerySwiperOptions: SwiperOptions = {
 const portfolioSwiperOptions: SwiperOptions = {
   breakpoints: {
     320: {
-      slidesPerView: 1,
-      spaceBetween: 15,
-    },
-    400: {
       slidesPerView: 2,
       spaceBetween: 15,
+      centeredSlides: true,
+      centeredSlidesBounds: true,
+      centerInsufficientSlides: true,
     },
     500: {
       slidesPerView: 3,

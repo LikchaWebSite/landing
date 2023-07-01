@@ -14,6 +14,12 @@
         :items="links"
         :class="$style.linksList"
       />
+
+      <IconButton
+        icon="burger"
+        :class="$style.burger"
+        @click="$emit('burger-button-click')"
+      />
     </Container>
   </header>
 </template>
@@ -21,6 +27,7 @@
 <script setup lang="ts">
 import Logo from '@/components/common/logo/index.vue'
 import Container from '@/components/common/container/index.vue'
+import IconButton from '@/components/common/icon-button/index.vue'
 import Navigation, { MenuItem } from '@/components/common/navigation/index.vue'
 import LinksList, { LinkItem } from '@/components/common/links-list/index.vue'
 
@@ -28,6 +35,10 @@ type Props = {
   menuItems?: MenuItem[]
   links?: LinkItem[]
 }
+
+defineEmits<{
+  (event: 'burger-button-click'): void
+}>()
 
 withDefaults(defineProps<Props>(), {
   menuItems: () => [],

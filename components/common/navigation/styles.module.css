@@ -5,6 +5,12 @@
   gap: 50px;
 }
 
+.list.vertical {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 15px;
+}
+
 .link {
   position: relative;
   display: block;
@@ -12,6 +18,15 @@
   color: var(--white);
   font-weight: 500;
   padding: 5px 0;
+}
+
+.link.large {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.link.dark {
+  color: var(--black);
 }
 
 .link::before {

@@ -1,6 +1,8 @@
 .container {
-  height: 140px;
-  width: 140px;
+  --size: 140px;
+
+  height: var(--size);
+  width: var(--size);
   border-radius: 50%;
   background-color: #FAFAFA;
   display: flex;
@@ -10,8 +12,13 @@
 }
 
 .textContainer {
+  --container-size: calc(var(--size) - 30px);
+
   position: relative;
-  transform: translate(-12px, -12px);
+  border-radius: 100%;
+  height: var(--container-size);
+  width: var(--container-size);
+  transform-origin: center;
   animation-name: rotate;
   animation-duration: 15s;
   animation-timing-function: linear;
@@ -24,6 +31,7 @@
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
+  transform-origin: center;
 }
 
 .icon {
@@ -35,10 +43,10 @@
 
 @keyframes rotate {
   from {
-    transform: rotate(0) translate(-12px, -10px);
+    transform: rotate(0);
   }
 
   to {
-    transform: rotate(360deg) translate(-12px, -10px);
+    transform: rotate(360deg);
   }
 }

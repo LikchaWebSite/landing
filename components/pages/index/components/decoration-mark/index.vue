@@ -3,14 +3,12 @@
     :class="$style.container"
     ref="textContainer"
   >
-    <span
-      :class="$style.textContainer"
-    >
+    <div :class="$style.textContainer">
       <CircleText />
-    </span>
+    </div>
     
     <Icon
-      icon="map"
+      icon="spa"
       :size="40"
       color="#BB7F5B"
       :class="$style.icon"
@@ -56,12 +54,11 @@ const CircleText = computed(() => {
       return h('div', {
         class: styles.textItem,
         style: {
-          textAlign: 'center',
-          position: 'absolute',
-          top: `${y}px`,
-          left: `${x}px`,
+          top: `calc(${y + 45}px)`,
+          left: `calc(${x + 44}px)`,
           transform: `
             rotate(${angle + 90}deg)
+            translateY(0%)
           `
         },
       }, char)
