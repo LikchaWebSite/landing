@@ -71,32 +71,17 @@ import { SwiperOptions } from 'swiper'
 
 const { width } = useWindowWidth()
 
-provide(WIDTH_SYMBOL, width.value)
+provide(WIDTH_SYMBOL, width)
 
 const isAsideMenuOpen = ref(false)
 
-const menuItems: MenuItem[] = [
-  {
-    label: 'Меню',
-    link: '#services',
-  },
-  {
-    label: 'Я – Лика',
-    link: '#about',
-  },
-  {
-    label: 'Обстановка',
-    link: '#gallery',
-  },
-  {
-    label: 'Портфолио',
-    link: '#portfolio',
-  },
-  {
-    label: 'Контакты',
-    link: '#contacts',
-  },
-]
+const address = `
+  Санкт-Петербург, <br>
+  Набережная реки Мойки 67-69 <br>
+  Кабинет 105
+`
+
+const ctaLink = ''
 
 const headerLinks: LinkItem[] = [
   {
@@ -122,13 +107,28 @@ const footerLinks: LinkItem[] = [
   },
 ]
 
-const address = `
-  Санкт-Петербург, <br>
-  Набережная реки Мойки 67-69 <br>
-  Кабинет 105
-`
-
-const ctaLink = ''
+const menuItems: MenuItem[] = [
+  {
+    label: 'Меню',
+    link: '#services',
+  },
+  {
+    label: 'Я – Лика',
+    link: '#about',
+  },
+  {
+    label: 'Обстановка',
+    link: '#gallery',
+  },
+  {
+    label: 'Портфолио',
+    link: '#portfolio',
+  },
+  {
+    label: 'Контакты',
+    link: '#contacts',
+  },
+]
 
 const services: ServiceItem[] = [
   {
@@ -200,7 +200,7 @@ const contacts: ContactItem[] = [
   {
     title: 'Адрес',
     value: {
-      text: 'Санкт-Петербург, Набережная реки Мойки 67-69 Кабинет 105',
+      text: removeTags(address),
     },
   },
   {

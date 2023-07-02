@@ -12,6 +12,11 @@ export default defineNuxtConfig({
       mapUrl: process.env.MAP_URL,
     },
   },
+  imports: {
+    dirs: [
+      './utils/**/*.ts'
+    ],
+  },
   alias: {
     'images': fileURLToPath(new URL('./assets/images', import.meta.url)),
   },

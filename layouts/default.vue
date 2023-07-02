@@ -1,7 +1,3 @@
 <template>
-  <div :class="$style.layout">
-    <NuxtPage />
-  </div>
+  <NuxtPage />
 </template>
-
-<style module src="./default.module.css" />
