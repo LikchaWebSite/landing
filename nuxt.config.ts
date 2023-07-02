@@ -1,5 +1,3 @@
-import { fileURLToPath } from 'url'
-
 const customTags = [
   'swiper-container',
   'swiper-slide',
@@ -17,9 +15,6 @@ export default defineNuxtConfig({
       './utils/**/*.ts'
     ],
   },
-  alias: {
-    'images': fileURLToPath(new URL('./assets/images', import.meta.url)),
-  },
   modules: [
     '@nuxt/image',
     '@pinia/nuxt',
@@ -33,8 +28,7 @@ export default defineNuxtConfig({
     '@/assets/styles/common.css',
   ],
   image: {
-    dir: 'public/images',
-    provider: 'ipx'
+    dir: 'public/images'
   },
   vue: {
     compilerOptions: {
