@@ -30,7 +30,7 @@
 </template>
 
 <script setup lang="ts">
-import { pluralizeWithCount } from '@/helpers/pluralize'
+import { pluralizeWithCount } from '@/utils/pluralize'
 import Button from '@/components/common/button/link.vue'
 
 export type ServiceItem = {
@@ -56,4 +56,4 @@ const durationText = computed(() => {
 })
 </script>
 
-<style module src="./styles.module.css" />
+<style module src="./styles.module.css" />~/utils/pluralize

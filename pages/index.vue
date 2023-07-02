@@ -1,30 +1,55 @@
 <template>
-  <Hero
-    id="hero"
-  />
-  <Services
-    id="services"
-    :services="services"
-  />
-  <About
-    id="about"
-  />
-  <Gallery
-    id="gallery"
-    :images="gallery"
-    title="Обстановка"
-    :swiper-options="gallerySwiperOptions"
-  />
-  <Gallery
-    id="portfolio"
-    title="Портфолио"
-    :images="portfolio"
-    :swiper-options="portfolioSwiperOptions"
-  />
-  <Contacts
-    id="contacts"
-    :items="contacts"
-  />
+  <div :class="$style.page">
+    <Header
+      :menu-items="menuItems"
+      :links="headerLinks"
+      :class="$style.header"
+      @burger-button-click="handleAsideMenuToggle"
+    />
+
+    <main :class="$style.main">
+      <Hero
+        id="hero"
+        :cta-link="ctaLink"
+      />
+      <Services
+        id="services"
+        :services="services"
+      />
+      <About
+        id="about"
+      />
+      <Gallery
+        id="gallery"
+        :images="gallery"
+        title="Обстановка"
+        :swiper-options="gallerySwiperOptions"
+      />
+      <Gallery
+        id="portfolio"
+        title="Портфолио"
+        :images="portfolio"
+        :swiper-options="portfolioSwiperOptions"
+      />
+      <Contacts
+        id="contacts"
+        :items="contacts"
+      />
+    </main>
+
+    <Footer
+      :links="footerLinks"
+      :class="$style.footer"
+    />
+
+    <AsideMenu
+      :is-open="isAsideMenuOpen"
+      :menu-items="menuItems"
+      :links="headerLinks"
+      :address="address"
+      @close="handleAsideMenuToggle(false)"
+    />
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -33,6 +58,11 @@ import Services from '@/components/pages/index/sections/services/index.vue'
 import About from '@/components/pages/index/sections/about/index.vue'
 import Gallery from '@/components/pages/index/sections/gallery/index.vue'
 import Contacts from '@/components/pages/index/sections/contacts/index.vue'
+import Header from '@/components/pages/index/components/header/index.vue'
+import Footer from '@/components/pages/index/components/footer/index.vue'
+import AsideMenu from '@/components/pages/index/components/aside-menu/index.vue'
+import { MenuItem } from '@/components/pages/index/components/navigation/index.vue'
+import { LinkItem } from '@/components/common/links-list/index.vue'
 import { ServiceItem } from '~/components/pages/index/components/service-item/index.vue'
 import { ContactItem } from '@/components/pages/index/components/contact-info-item/index.vue'
 import { useWindowWidth } from '~/composables/use-window-width'
@@ -42,6 +72,63 @@ import { SwiperOptions } from 'swiper'
 const { width } = useWindowWidth()
 
 provide(WIDTH_SYMBOL, width.value)
+
+const isAsideMenuOpen = ref(false)
+
+const menuItems: MenuItem[] = [
+  {
+    label: 'Меню',
+    link: '#services',
+  },
+  {
+    label: 'Я – Лика',
+    link: '#about',
+  },
+  {
+    label: 'Обстановка',
+    link: '#gallery',
+  },
+  {
+    label: 'Портфолио',
+    link: '#portfolio',
+  },
+  {
+    label: 'Контакты',
+    link: '#contacts',
+  },
+]
+
+const headerLinks: LinkItem[] = [
+  {
+    url: '',
+    icon: 'instagram',
+    isMarked: true,
+  },
+  {
+    url: '',
+    icon: 'map',
+  },
+]
+
+const footerLinks: LinkItem[] = [
+  {
+    url: '',
+    icon: 'telegram',
+  },
+  {
+    url: '',
+    icon: 'instagram',
+    isMarked: true,
+  },
+]
+
+const address = `
+  Санкт-Петербург, <br>
+  Набережная реки Мойки 67-69 <br>
+  Кабинет 105
+`
+
+const ctaLink = ''
 
 const services: ServiceItem[] = [
   {
@@ -175,4 +262,10 @@ const portfolioSwiperOptions: SwiperOptions = {
     }
   }
 }
+
+function handleAsideMenuToggle(state?: boolean) {
+  isAsideMenuOpen.value = state ?? !isAsideMenuOpen.value
+}
 </script>
+
+<style module src="./styles.module.css"></style>

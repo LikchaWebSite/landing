@@ -26,7 +26,7 @@
 
 <script setup lang="ts">
 import Container from '@/components/common/container/index.vue'
-import SectionTitle from '@/components/common/section-title/index.vue'
+import SectionTitle from '@/components/pages/index/components/section-title/index.vue'
 import ServiceItemComponent, { ServiceItem } from '@/components/pages/index/components/service-item/index.vue'
 
 defineProps<{

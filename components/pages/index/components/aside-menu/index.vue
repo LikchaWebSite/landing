@@ -50,7 +50,7 @@
 
 <script setup lang="ts">
 import IconButton from '@/components/common/icon-button/index.vue'
-import Navigation, { MenuItem } from '@/components/common/navigation/index.vue'
+import Navigation, { MenuItem } from '@/components/pages/index/components/navigation/index.vue'
 import LinksList, { LinkItem } from '@/components/common/links-list/index.vue'
 import { THEME_SYMBOL } from '~/shared/constants/provide-symbols'
 

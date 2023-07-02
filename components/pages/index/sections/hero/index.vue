@@ -13,7 +13,7 @@
         </span>
 
         <Button
-          href="/"
+          :href="ctaLink"
           target="_blank"
           :class="$style.button"
         >
@@ -30,6 +30,10 @@
 import Button from '@/components/common/button/link.vue'
 import Container from '@/components/common/container/index.vue'
 import DecorationMark from '@/components/pages/index/components/decoration-mark/index.vue'
+
+defineProps<{
+  ctaLink: string
+}>()
 </script>
 
 <style module src="./styles.module.css"></style>

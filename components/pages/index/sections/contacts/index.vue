@@ -54,7 +54,7 @@
 
 <script setup lang="ts">
 import ContactInfoItem, { ContactItem } from '@/components/pages/index/components/contact-info-item/index.vue'
-import SectionTitle from '@/components/common/section-title/index.vue'
+import SectionTitle from '@/components/pages/index/components/section-title/index.vue'
 import Container from '@/components/common/container/index.vue'
 import { createElementBlock } from 'vue'
 

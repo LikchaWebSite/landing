@@ -28,7 +28,7 @@
 import Logo from '@/components/common/logo/index.vue'
 import Container from '@/components/common/container/index.vue'
 import IconButton from '@/components/common/icon-button/index.vue'
-import Navigation, { MenuItem } from '@/components/common/navigation/index.vue'
+import Navigation, { MenuItem } from '@/components/pages/index/components/navigation/index.vue'
 import LinksList, { LinkItem } from '@/components/common/links-list/index.vue'
 
 type Props = {
