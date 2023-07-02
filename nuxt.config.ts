@@ -10,11 +10,6 @@ export default defineNuxtConfig({
       mapUrl: process.env.MAP_URL,
     },
   },
-  imports: {
-    dirs: [
-      './utils/**/*.ts'
-    ],
-  },
   modules: [
     '@nuxt/image',
     '@pinia/nuxt',
@@ -27,9 +22,7 @@ export default defineNuxtConfig({
     '@/assets/styles/variables.css',
     '@/assets/styles/common.css',
   ],
-  image: {
-    dir: 'public/images'
-  },
+  image: {},
   vue: {
     compilerOptions: {
       isCustomElement: (tag) => customTags.includes(tag)

@@ -132,7 +132,7 @@ const menuItems: MenuItem[] = [
 
 const services: ServiceItem[] = [
   {
-    img: 'services/1.webp',
+    img: 'images/services/1.webp',
     title: 'Классический массаж',
     description: 'Как классическая музыка - образцовое ручное произведение, золотой фонд массажной культуры. Техники классического массажа сочетают глубину, содержательность, идейную значительность с совершенством формы.',
     duration: 1,
@@ -140,7 +140,7 @@ const services: ServiceItem[] = [
     href: '',
   },
   {
-    img: 'services/2.webp',
+    img: 'images/services/2.webp',
     title: 'Балийский массаж',
     description: 'Время замедляется, а сила возрастает. Неспешная и глубокая прогулка рук вдоль линий тела, напоминающая омовение песчаных берегов острова волнами океана.',
     duration: 1,
@@ -148,7 +148,7 @@ const services: ServiceItem[] = [
     href: '',
   },
   {
-    img: 'services/3.webp',
+    img: 'images/services/3.webp',
     title: 'Антицеллюлитный массаж',
     description: 'Антицеллюлитный массаж - беспощадно (при большом желании). При маленьком желании – просто горячо. У нас цель - организовать приток крови к подкожно-жировой клетчатке. Мы к этой цели быстро и верно, широко шагая!',
     duration: 1,
@@ -156,7 +156,7 @@ const services: ServiceItem[] = [
     href: '',
   },
   {
-    img: 'services/4.webp',
+    img: 'images/services/4.webp',
     title: 'Спортивный массаж',
     description: 'Спортивный массаж - это сильно. Он и перед, и после, и вместо тренировки. Как в боях – правил в нем нет. Ограничений по использованию определенной техники тоже: в ход идут локти и кулаки. Разбиваем забитое, выжимаем зажатое.',
     duration: 1,
@@ -164,7 +164,7 @@ const services: ServiceItem[] = [
     href: '',
   },
   {
-    img: 'services/5.webp',
+    img: 'images/services/5.webp',
     title: 'Массаж лица',
     description: 'Массаж лица - скульптурно. Мимическим мышцам тоже нужна тренировка, чтобы быть в тонусе. В классическом понимании - боремся с морщинами, предотвращаем их появление.',
     duration: 1,
@@ -172,7 +172,7 @@ const services: ServiceItem[] = [
     href: '',
   },
   {
-    img: 'services/6.webp',
+    img: 'images/services/6.webp',
     title: 'Релакс массаж',
     description: 'Релакс массаж - это медленно. Это от поверхностного – к недрам. Это чутко и неуловимо. Тело плавится под теплыми движениями рук, а разум отправляется бороздить просторы безграничного.',
     duration: 1,
@@ -182,18 +182,18 @@ const services: ServiceItem[] = [
 ]
 
 const gallery = [
-  'gallery/1.webp',
-  'gallery/2.webp',
-  'gallery/3.webp',
-  'gallery/4.webp',
+  'images/gallery/1.webp',
+  'images/gallery/2.webp',
+  'images/gallery/3.webp',
+  'images/gallery/4.webp',
 ]
 
 const portfolio = [
-  'portfolio/1.jpg',
-  'portfolio/2.jpg',
-  'portfolio/3.jpg',
-  'portfolio/4.jpg',
-  'portfolio/5.jpg',
+  'images/portfolio/1.jpg',
+  'images/portfolio/2.jpg',
+  'images/portfolio/3.jpg',
+  'images/portfolio/4.jpg',
+  'images/portfolio/5.jpg',
 ]
 
 const contacts: ContactItem[] = [

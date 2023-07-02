@@ -5,7 +5,7 @@
         <div :class="$style.side">
           <AosContainer animation="fade-right">
             <NuxtImg
-              src="about/profile.webp"
+              src="images/about/profile.webp"
               fit="cover"
               loading="lazy"
               :class="$style.image"
