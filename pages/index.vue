@@ -18,6 +18,7 @@
       />
       <About
         id="about"
+        profile-image="images/about/profile.webp"
       />
       <Gallery
         id="gallery"

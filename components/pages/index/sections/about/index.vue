@@ -5,7 +5,7 @@
         <div :class="$style.side">
           <AosContainer animation="fade-right">
             <NuxtImg
-              src="images/about/profile.webp"
+              :src="profileImage"
               fit="cover"
               loading="lazy"
               :class="$style.image"
@@ -42,6 +42,10 @@
 import AosContainer from '@/components/common/aos-container/index.vue'
 import SectionTitle from '@/components/pages/index/components/section-title/index.vue'
 import Container from '@/components/common/container/index.vue'
+
+defineProps<{
+  profileImage: string
+}>()
 </script>
 
 <style module src="./styles.module.css" />
