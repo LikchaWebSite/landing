@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 import { defineAsyncComponent } from 'vue'
-import { THEME_SYMBOL } from '~/shared/constants/provide-symbols'
+import { THEME_SYMBOL } from '~/utils/constants/provide-symbols'
 
 export type Variant = 'instagram' | 'telegram' | 'map' | 'burger' | 'cross' | 'spa'
 

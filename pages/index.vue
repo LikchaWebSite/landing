@@ -66,7 +66,7 @@ import { LinkItem } from '@/components/common/links-list/index.vue'
 import { ServiceItem } from '~/components/pages/index/components/service-item/index.vue'
 import { ContactItem } from '@/components/pages/index/components/contact-info-item/index.vue'
 import { useWindowWidth } from '~/composables/use-window-width'
-import { WIDTH_SYMBOL } from '~/shared/constants/provide-symbols'
+import { WIDTH_SYMBOL } from '~/utils/constants/provide-symbols'
 import { SwiperOptions } from 'swiper'
 
 const { width } = useWindowWidth()

@@ -23,7 +23,7 @@
 
 <script setup lang="ts">
 import Icon, { Variant } from '@/components/common/icon/index.vue'
-import { THEME_SYMBOL } from '~/shared/constants/provide-symbols'
+import { THEME_SYMBOL } from '~/utils/constants/provide-symbols'
 
 const theme = inject(THEME_SYMBOL, 'light')
 

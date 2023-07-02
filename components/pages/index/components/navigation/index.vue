@@ -27,7 +27,7 @@
 </template>
 
 <script setup lang="ts">
-import { THEME_SYMBOL } from '~/shared/constants/provide-symbols'
+import { THEME_SYMBOL } from '~/utils/constants/provide-symbols'
 
 export type MenuItem = {
   label: string
