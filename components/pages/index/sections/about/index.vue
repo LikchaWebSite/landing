@@ -3,31 +3,35 @@
     <Container>
       <div :class="$style.wrapper">
         <div :class="$style.side">
-          <NuxtImg
-            src="about/profile.webp"
-            fit="cover"
-            loading="lazy"
-            :class="$style.image"
-          />
+          <AosContainer animation="fade-right">
+            <NuxtImg
+              src="about/profile.webp"
+              fit="cover"
+              loading="lazy"
+              :class="$style.image"
+            />
+          </AosContainer>
         </div>
         <div :class="$style.side">
-          <div :class="$style.content">
-            <SectionTitle color="white">
-              Я - Лика
-            </SectionTitle>
+          <AosContainer animation="fade-left">
+            <div :class="$style.content">
+              <SectionTitle color="white">
+                Я - Лика
+              </SectionTitle>
 
-            <span :class="$style.subtitle">
-              в массаже 2 года.
-            </span>
+              <span :class="$style.subtitle">
+                в массаже 2 года.
+              </span>
 
-            <p :class="$style.text">
-              Мой массаж – обволакивающий. Это самое точное слово для описания того, как я взаимодействую с каждой фиброй тела.
-              <br><br>
-              В прошлом - на серьезном занималась баскетболом, что отличает мой массаж силой крупных рычагов и быстротой слаженных движений, когда нужно.
-              <br><br>
-              В том же прошлом окончила музыкальную школу по классу фортепиано, что одаривает мой массаж маневренностью и чуткостью мелкой моторики.
-            </p>
-          </div>
+              <p :class="$style.text">
+                Мой массаж – обволакивающий. Это самое точное слово для описания того, как я взаимодействую с каждой фиброй тела.
+                <br><br>
+                В прошлом - на серьезном занималась баскетболом, что отличает мой массаж силой крупных рычагов и быстротой слаженных движений, когда нужно.
+                <br><br>
+                В том же прошлом окончила музыкальную школу по классу фортепиано, что одаривает мой массаж маневренностью и чуткостью мелкой моторики.
+              </p>
+            </div>
+          </AosContainer>
         </div>
       </div>
     </Container>
@@ -35,6 +39,7 @@
 </template>
 
 <script setup lang="ts">
+import AosContainer from '@/components/common/aos-container/index.vue'
 import SectionTitle from '@/components/pages/index/components/section-title/index.vue'
 import Container from '@/components/common/container/index.vue'
 </script>
