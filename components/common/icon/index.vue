@@ -11,7 +11,7 @@
 import { defineAsyncComponent } from 'vue'
 import { THEME_SYMBOL } from '~/utils/constants/provide-symbols'
 
-export type Variant = 'instagram' | 'telegram' | 'map' | 'burger' | 'cross' | 'spa'
+export type Variant = 'instagram' | 'telegram' | 'map' | 'burger' | 'cross' | 'spa' | 'logo'
 
 const theme = inject(THEME_SYMBOL, '#ffffff')
 

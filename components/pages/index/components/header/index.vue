@@ -1,8 +1,14 @@
 <template>
-  <header :class="$style.header">
+  <header
+    :class="[
+      $style.header,
+      isScrolled && $style.scrolled,
+    ]"
+  >
     <Container :class="$style.container">
       <Logo
         :class="$style.logo"
+        link="/"
       />
 
       <Navigation
@@ -32,6 +38,7 @@ import Navigation, { MenuItem } from '@/components/pages/index/components/naviga
 import LinksList, { LinkItem } from '@/components/common/links-list/index.vue'
 
 type Props = {
+  isScrolled: boolean
   menuItems?: MenuItem[]
   links?: LinkItem[]
 }

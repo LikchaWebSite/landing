@@ -3,7 +3,6 @@
     <NuxtImg
       :src="img"
       :alt="title"
-      loading="lazy"
       fit="cover"
     />
 

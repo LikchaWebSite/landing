@@ -1,6 +1,7 @@
 <template>
   <div :class="$style.page">
     <Header
+      :is-scrolled="isScrolledY"
       :menu-items="menuItems"
       :links="headerLinks"
       :class="$style.header"
@@ -67,10 +68,14 @@ import { LinkItem } from '@/components/common/links-list/index.vue'
 import { ServiceItem } from '~/components/pages/index/components/service-item/index.vue'
 import { ContactItem } from '@/components/pages/index/components/contact-info-item/index.vue'
 import { useWindowWidth } from '~/composables/use-window-width'
+import { useWindowScroll } from '~/composables/use-window-scroll'
+import { useScrollLock } from '~/composables/use-scroll-lock'
 import { WIDTH_SYMBOL } from '~/utils/constants/provide-symbols'
 import { SwiperOptions } from 'swiper'
 
 const { width } = useWindowWidth()
+const { isScrolledY } = useWindowScroll()
+const { toggleScrollLock } = useScrollLock()
 
 provide(WIDTH_SYMBOL, width)
 
@@ -86,23 +91,23 @@ const ctaLink = ''
 
 const headerLinks: LinkItem[] = [
   {
-    url: '',
+    url: 'https://instagram.com/volokut_spb',
     icon: 'instagram',
     isMarked: true,
   },
   {
-    url: '',
+    url: 'https://yandex.ru/maps/-/CDuTAaS',
     icon: 'map',
   },
 ]
 
 const footerLinks: LinkItem[] = [
   {
-    url: '',
+    url: 'https://t.me/milkissss',
     icon: 'telegram',
   },
   {
-    url: '',
+    url: 'https://instagram.com/volokut_spb',
     icon: 'instagram',
     isMarked: true,
   },
@@ -266,6 +271,8 @@ const portfolioSwiperOptions: SwiperOptions = {
 
 function handleAsideMenuToggle(state?: boolean) {
   isAsideMenuOpen.value = state ?? !isAsideMenuOpen.value
+
+  toggleScrollLock(isAsideMenuOpen.value)
 }
 </script>
 

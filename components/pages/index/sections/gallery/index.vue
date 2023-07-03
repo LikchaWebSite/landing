@@ -19,7 +19,7 @@
           <NuxtImg
             :src="image"
             :class="$style.image"
-            loading="lazy"
+            fit="cover"
           />
         </swiper-slide>
       </swiper-container>

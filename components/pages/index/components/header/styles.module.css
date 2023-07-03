@@ -4,17 +4,18 @@
   left: 0;
   width: 100%;
   z-index: 100;
+  padding: 33px 0;
+  transition: .3s ease-in-out;
+  transition-property: padding, background-color;
 }
 
 .burger {
-  display: none;
+  /* display: none; */
 }
 
 .container {
   display: flex;
   align-items: center;
-  padding-top: 33px;
-  padding-bottom: 33px;
 }
 
 .navigation {
@@ -26,6 +27,15 @@
 }
 
 @media screen and (width <= 1100px) {
+  .header {
+    position: fixed;
+  }
+
+  .header.scrolled {
+    padding: 10px 0;
+    background-color: rgb(0 0 0 / 30%);
+  }
+
   .navigation,
   .linksList {
     display: none;

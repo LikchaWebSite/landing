@@ -19,11 +19,11 @@
 
   .servicesList {
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    gap: 25px;
   }
 }
 
-@media screen and (width <= 768px) {
+@media screen and (width <= 650px) {
   .title {
     margin-bottom: 35px;
   }

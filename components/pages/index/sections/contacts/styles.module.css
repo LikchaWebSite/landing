@@ -55,9 +55,13 @@
 
   .mapWrapper {
     overflow: hidden;
-    display: grid;
+    display: flex;
     min-height: 80vw;
     transform: translateX(0);
+  }
+
+  .mapWrapper iframe {
+    height: auto;
   }
 
   .content {

@@ -1,4 +1,8 @@
 .logo {
-  width: 62px;
-  display: block;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  flex-shrink: 0;
 }

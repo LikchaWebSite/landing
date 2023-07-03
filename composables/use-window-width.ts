@@ -1,12 +1,6 @@
 export function useWindowWidth() {
   const width = ref(0)
 
-  if (process.server) {
-    return {
-      width
-    }
-  }
-
   const resizeListener = () => {
     width.value = window.innerWidth
   }

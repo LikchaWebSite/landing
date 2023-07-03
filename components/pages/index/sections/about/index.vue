@@ -7,7 +7,6 @@
             <NuxtImg
               :src="profileImage"
               fit="cover"
-              loading="lazy"
               :class="$style.image"
             />
           </AosContainer>

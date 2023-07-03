@@ -4,10 +4,12 @@
     :class="$style.button"
     @click="$emit('click')"
   >
-    <Icon
-      :icon="icon"
-      :size="size"
-    />
+    <div :class="$style.container">
+      <Icon
+        :icon="icon"
+        :size="size"
+      />
+    </div>
   </button>
 </template>
 

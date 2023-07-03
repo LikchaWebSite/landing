@@ -13,9 +13,8 @@
           v-for="(item, index) in services"
           :key="item.title"
           animation="fade-up"
-          :delay="index * 150"
+          :delay="(index % 3) * 150"
           :duration="600"
-          :offset="50"
         >
           <ServiceItemComponent
             :img="item.img"
