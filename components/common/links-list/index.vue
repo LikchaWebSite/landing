@@ -12,6 +12,7 @@
       <a
         :href="link.url"
         :class="$style.link"
+        target="_blank"
       >
         <Icon
           :icon="link.icon"
