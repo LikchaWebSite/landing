@@ -5,6 +5,11 @@ const customTags = [
 
 export default defineNuxtConfig({
   ssr: true,
+  runtimeConfig: {
+    public: {
+      mapUrl: process.env.MAP_URL,
+    },
+  },
   app: {
     head: {
       link: [
@@ -30,14 +35,30 @@ export default defineNuxtConfig({
       ],
     }
   },
-  runtimeConfig: {
-    public: {
-      mapUrl: process.env.MAP_URL,
+  googleFonts: {
+    preload: true,
+    display: 'swap',
+    text: 'Привет мир!',
+    families: {
+      Roboto: {
+        wght: [
+          300,
+          400,
+          500,
+          700,
+        ],
+      },
     },
+  },
+  vue: {
+    compilerOptions: {
+      isCustomElement: (tag) => customTags.includes(tag)
+    }
   },
   modules: [
     '@nuxt/image',
     '@pinia/nuxt',
+    '@nuxtjs/google-fonts',
     '@nuxtjs/eslint-module',
   ],
   css: [
@@ -47,10 +68,4 @@ export default defineNuxtConfig({
     '@/assets/styles/variables.css',
     '@/assets/styles/common.css',
   ],
-  image: {},
-  vue: {
-    compilerOptions: {
-      isCustomElement: (tag) => customTags.includes(tag)
-    }
-  }
 })

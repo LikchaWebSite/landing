@@ -44,7 +44,9 @@ const localSwiperOptions: SwiperOptions = {
   ...props.swiperOptions,
   mousewheel: true,
   grabCursor: true,
-  pagination: true,
+  pagination: {
+    clickable: true,
+  },
 }
 
 onMounted(() => {

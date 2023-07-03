@@ -23,6 +23,7 @@
   "devDependencies": {
     "@nuxt/image": "^1.0.0-rc.1",
     "@nuxtjs/eslint-module": "^4.1.0",
+    "@nuxtjs/google-fonts": "^3.0.1",
     "@types/aos": "^3.0.4",
     "@types/node": "^18",
     "@vue/eslint-config-typescript": "^11.0.3",

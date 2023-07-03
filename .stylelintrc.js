@@ -7,6 +7,7 @@ module.exports = {
     'property-no-unknown': [true, {
       ignoreProperties: ['composes']
     }],
+    'media-feature-range-notation': 'prefix',
     'declaration-no-important': true,
     'selector-type-case': 'lower',
 		'selector-class-pattern': [/^[a-z0-9][a-zA-Z0-9]*$/],
