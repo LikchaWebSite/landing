@@ -200,7 +200,7 @@ const portfolio = [
   'images/portfolio/3.jpg',
   'images/portfolio/4.jpg',
   'images/portfolio/5.jpg',
-  'images/portfolio/6.jpg',
+  'images/portfolio/6.jpg'
 ]
 
 const contacts: ContactItem[] = [
