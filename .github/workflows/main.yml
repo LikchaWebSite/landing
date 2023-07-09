@@ -1,0 +1,20 @@
+name: Main Landing Action
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    env:
+      cache-name: cache-node-modules
+    steps:
+    - uses: actions/cache@v3
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        path: ~/.npm
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+    - run: npm install
