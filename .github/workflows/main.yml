@@ -7,25 +7,22 @@ on:
 jobs:
   install:
     runs-on: ubuntu-latest
-    env:
-      cache-name: cache-node-modules
     steps:
     - uses: actions/cache@v3
       with:
         path: ~/.npm
-        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-
+        key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
       with:
         node-version: '18'
-    - run: echo ${{ hashFiles('**/package-lock.json') }}
     - run: npm install --no-scripts
     
   stylelint:
     needs: install
     runs-on: ubuntu-latest
-    env:
-      cache-name: cache-node-modules
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -34,15 +31,14 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-      - run: echo ${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-
+          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
       - run: npm run stylelint
     
   eslint:
     needs: install
     runs-on: ubuntu-latest
-    env:
-      cache-name: cache-node-modules
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -50,7 +46,8 @@ jobs:
           node-version: '18'
       - uses: actions/cache@v3
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-      - run: echo ${{ hashFiles('**/package-lock.json') }}
+          path: ~/.npm        
+          restore-keys: |
+            ${{ runner.os }}-
+          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
       - run: npm run eslint
