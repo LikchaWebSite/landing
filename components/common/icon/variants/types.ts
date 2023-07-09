@@ -1,3 +1,3 @@
-export type BaseVariantProps = {
+export type basevariantprops = {
   size: number
 }
