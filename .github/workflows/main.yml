@@ -54,7 +54,7 @@ jobs:
       - name: Build and push to Docker
         uses: docker/build-push-action@v4.1.1
         with:
-          tags: fe-app
+          tags: ${{ vars.DOCKER_USERNAME }}/fe-app
           pull: true
           push: true
       
