@@ -11,10 +11,11 @@ jobs:
       cache-name: cache-node-modules
     steps:
     - uses: actions/cache@v3
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
       with:
         node-version: '18'
-        path: ~/.npm
-        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
     - run: npm install
