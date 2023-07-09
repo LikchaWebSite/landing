@@ -23,6 +23,8 @@ jobs:
   stylelint:
     needs: install
     runs-on: ubuntu-latest
+    env:
+      cache-name: cache-node-modules
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -37,6 +39,8 @@ jobs:
   eslint:
     needs: install
     runs-on: ubuntu-latest
+    env:
+      cache-name: cache-node-modules
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
