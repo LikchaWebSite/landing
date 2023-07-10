@@ -52,11 +52,11 @@ jobs:
         uses: docker/login-action@v2.2.0
         with:
           username: ${{ vars.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_HUB_TOKEN }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build and push to Docker
         uses: docker/build-push-action@v4.1.1
         with:
-          tags: ${{ vars.DOCKER_USERNAME }}/fe-app
+          tags: ${{ vars.DOCKERHUB_USER }}/fe-app
           pull: true
           push: true
       
