@@ -2,13 +2,14 @@
 
 FROM node:18-alpine
 
-WORKDIR /app
+WORKDIR /usr/src/app
 
 ARG MAP_URL
+ARG NITRO_PORT=3000
 
 ENV NODE_ENV=development
 ENV NITRO_HOST=0.0.0.0
-ENV NITRO_PORT=3000
+ENV NITRO_PORT=$NITRO_PORT
 ENV MAP_URL=$MAP_URL
 
 COPY package*.json ./
@@ -19,6 +20,7 @@ COPY . .
 
 RUN npm run build
 
-EXPOSE 3000
+EXPOSE $NITRO_PORT
 
 ENTRYPOINT [ "npm", "run", "start" ]
+
