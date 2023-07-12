@@ -14,5 +14,5 @@ jobs:
           username: ${{ vars.DOCKERHUB_USER }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Bulild Docker containers
-        run: cd .. && ls
+        run: ls
       
