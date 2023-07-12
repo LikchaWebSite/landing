@@ -16,5 +16,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3.5.3
       - name: Bulild Docker containers
-        run: docker compose build --build-arg MAP_URL=${{ vars.MAP_URL }} --push
+        run: docker compose build --build-arg MAP_URL='${{ vars.MAP_URL }}' --push
       
