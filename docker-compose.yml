@@ -1,5 +1,6 @@
 services:
   fe-app:
+    image: belshed/fe-app
     build: .
     hostname: fe-app
     environment:
@@ -7,6 +8,7 @@ services:
     ports:
       - 81:3000
   nginx:
+    image: belshed/fe-app-nginx
     build: ./nginx
     ports:
       - 80:80
