@@ -14,5 +14,5 @@ jobs:
           username: ${{ vars.DOCKERHUB_USER }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Bulild Docker containers
-        run: docker compose build --build-arg MAP_URL=${{ vars.MAP_URL }}
+        run: docker compose -f ../docker-compose.yml build --build-arg MAP_URL=${{ vars.MAP_URL }} --push
       
