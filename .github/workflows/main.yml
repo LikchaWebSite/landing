@@ -16,5 +16,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3.5.3
       - name: Bulild Docker containers
-        run: docker compose up --build
+        run: docker compose build
       
