@@ -7,7 +7,6 @@
       :class="$style.header"
       @burger-button-click="handleAsideMenuToggle"
     />
-
     <main :class="$style.main">
       <Hero
         id="hero"
