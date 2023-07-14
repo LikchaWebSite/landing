@@ -1,9 +1,10 @@
 .footer {
-  padding: 35px 0 50px;
+  padding: 35px 0 30px;
   display: grid;
   gap: 25px;
   background-image: url('@/assets/images/footer_bg.webp');
   background-size: cover;
+  background-position: center;
 }
 
 .line {
@@ -20,7 +21,7 @@
 
 .infoWrapper {
   display: grid;
-  gap: 10px;
+  gap: 20px;
 }
 
 .infoContainer {

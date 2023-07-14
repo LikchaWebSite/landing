@@ -60,7 +60,7 @@
     transform: translateX(0);
   }
 
-  .mapWrapper iframe {
+  .mapWrapper > * {
     height: auto;
   }
 

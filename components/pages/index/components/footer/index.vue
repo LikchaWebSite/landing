@@ -14,7 +14,7 @@
 
         <a
           :class="$style.info"
-          href=""
+          href="/policy"
         >
           Политика конфиденциальности
         </a>
