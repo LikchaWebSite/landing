@@ -16,12 +16,12 @@ import AsideNavigation from '@/components/common/aside-navigation/index.vue'
 import { AsideLink } from 'components/common/aside-navigation/types'
 
 const route = useRoute()
-const [{ body }] = await queryContent(route.path).find()
+const { data } = await useAsyncData(queryContent(route.path).findOne)
 
 const links = ref<AsideLink[]>([])
 
 onMounted(() => {
-  links.value = body.children
+  links.value = (data.value?.body.children ?? [])
     .filter(({ tag }: {tag: string}) => tag === 'h2')
     .map(({ props, children }: any) => {
       return {
