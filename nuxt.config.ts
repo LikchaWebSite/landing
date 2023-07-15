@@ -20,6 +20,12 @@ export default defineNuxtConfig({
           async: true,
         },
       ],
+      meta: [
+        {
+          name: 'yandex-verification',
+          content: 'd5d4268abf2e2740',
+        }
+      ],
       link: [
         {
           rel: 'apple-touch-icon',
