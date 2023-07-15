@@ -1,11 +1,9 @@
 <template>
   <div :class="$style.page">
-    <div>
-      <AsideNavigation
-        :links="links"
-        :class="$style.navigation"
-      />
-    </div>
+    <AsideNavigation
+      :links="links"
+      :class="$style.navigation"
+    />
 
     <ContentDoc />
   </div>
@@ -16,24 +14,25 @@ import AsideNavigation from '@/components/common/aside-navigation/index.vue'
 import { MarkdownNode } from '@nuxt/content/dist/runtime/types'
 import { AsideLink } from 'components/common/aside-navigation/types'
 
+const { currentRoute } = useRouter()
+
+const { data } = await useAsyncData(queryContent(currentRoute.value.path).findOne)
+
 const links = ref<AsideLink[]>([])
-const route = useRoute()
 
-useAsyncData(async () => {
-  const { body } = await queryContent(route.path).findOne()
-
-  links.value = body.children
+onMounted(() => {
+  links.value = (data.value?.body?.children ?? [])
     .filter(({ tag }: MarkdownNode) => tag === 'h2')
     .map(({ props, children }: any) => {
       return {
         href: `#${props.id}`,
-        active: route.hash === `#${props.id}`,
+        active: currentRoute.value.hash === `#${props.id}`,
         text: children[0].value,
       }
     })
 })
 
-watch(route, ({ hash }) => {
+watch(currentRoute, ({ hash }) => {
   links.value = links.value
     .map((link) => ({
       ...link,

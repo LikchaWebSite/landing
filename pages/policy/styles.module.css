@@ -8,6 +8,7 @@
 .navigation {
   position: sticky;
   top: 30px;
+  height: min-content;
 }
 
 @media screen and (max-width: 768px) {
