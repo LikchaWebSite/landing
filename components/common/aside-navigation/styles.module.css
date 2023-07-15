@@ -1,0 +1,34 @@
+.aside {
+  padding: 15px;
+  border-radius: 10px;
+  width: 100%;
+  border: 1px solid var(--grey);
+}
+
+.list {
+  list-style-type: none;
+  display: grid;
+}
+
+.listItem:not(:last-child) {
+  padding-bottom: 0.6em;
+}
+
+.listItem + .listItem {
+  padding-top: 0.6em;
+  border-top: 1px solid var(--grey);
+}
+
+.link {
+  transition: color ease-in-out 0.2s;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.link:focus,
+.link.active,
+.link:hover {
+  outline: none;
+  color: var(--accent);
+}
+
