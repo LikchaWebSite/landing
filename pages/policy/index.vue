@@ -1,6 +1,6 @@
 <template>
   <CommonContainer
-    :max-width="1000"
+    :max-width="900"
     :class="$style.page"
   >
     <ContentDoc />
