@@ -13,16 +13,17 @@
 
 <script setup lang="ts">
 import AsideNavigation from '@/components/common/aside-navigation/index.vue'
+import { MarkdownNode } from '@nuxt/content/dist/runtime/types'
 import { AsideLink } from 'components/common/aside-navigation/types'
 
-const route = useRoute()
-const { data } = await useAsyncData(queryContent(route.path).findOne)
-
 const links = ref<AsideLink[]>([])
+const route = useRoute()
 
-onMounted(() => {
-  links.value = (data.value?.body.children ?? [])
-    .filter(({ tag }: {tag: string}) => tag === 'h2')
+useAsyncData(async () => {
+  const { body } = await queryContent(route.path).findOne()
+
+  links.value = body.children
+    .filter(({ tag }: MarkdownNode) => tag === 'h2')
     .map(({ props, children }: any) => {
       return {
         href: `#${props.id}`,
