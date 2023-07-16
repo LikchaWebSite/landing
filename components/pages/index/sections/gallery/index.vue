@@ -28,7 +28,7 @@
 </template>
 
 <script setup lang="ts">
-import { SwiperOptions } from 'swiper'
+import { SwiperOptions } from 'swiper/types'
 import SectionTitle from '@/components/pages/index/components/section-title/index.vue'
 import Container from '@/components/common/container/index.vue'
 
