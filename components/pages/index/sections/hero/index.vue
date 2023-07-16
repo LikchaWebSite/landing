@@ -5,7 +5,7 @@
         <h1 :class="$style.title">
           <span>volok</span>
           <span>u</span>
-          <span>t22</span>
+          <span>t2</span>
         </h1>
 
         <span :class="$style.subtitle">
