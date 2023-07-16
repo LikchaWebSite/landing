@@ -192,10 +192,10 @@ const services: ServiceItem[] = [
 ]
 
 const gallery = [
-  'images/gallery/1.webp',
-  'images/gallery/2.webp',
-  'images/gallery/3.webp',
   'images/gallery/4.webp',
+  'images/gallery/3.webp',
+  'images/gallery/2.webp',
+  'images/gallery/1.webp',
 ]
 
 const portfolio = [
