@@ -269,7 +269,7 @@ const portfolioSwiperOptions: SwiperOptions = {
     },
     1280: {
       slidesPerView: 5,
-      spaceBetween: 50
+      spaceBetween: 50,
     }
   }
 }
