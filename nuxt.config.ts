@@ -12,7 +12,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'Volokut',
+      title: 'Volokut – комната массажных дел на набережной реки Мойки',
       script: [
         {
           type: 'text/javascript',
