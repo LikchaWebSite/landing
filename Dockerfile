@@ -20,7 +20,5 @@ COPY . .
 
 RUN npm run build
 
-EXPOSE $NITRO_PORT
-
 ENTRYPOINT [ "npm", "run", "start" ]
 
