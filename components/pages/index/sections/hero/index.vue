@@ -3,9 +3,7 @@
     <Container :class="$style.container">
       <div :class="$style.content">
         <h1 :class="$style.title">
-          <span>volok</span>
-          <span>u</span>
-          <span>t</span>
+          volok u t
         </h1>
 
         <span :class="$style.subtitle">
