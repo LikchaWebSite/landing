@@ -3,7 +3,7 @@
     <Container :class="$style.container">
       <div :class="$style.content">
         <h1 :class="$style.title">
-          volok u t2
+          volok u t
         </h1>
 
         <span :class="$style.subtitle">
