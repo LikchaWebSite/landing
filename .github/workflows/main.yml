@@ -8,6 +8,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Login to Docker Hub
         uses: docker/login-action@v2.2.0
         with:
@@ -19,4 +21,6 @@ jobs:
           tags: ${{ vars.DOCKERHUB_USER }}/${{ vars.DOCKER_IMAGE }}
           build-args: MAP_URL=${{ vars.MAP_URL }}
           push: true
+          cache-from: type=registry,ref=${{ vars.DOCKERHUB_USER }}/${{ vars.DOCKER_IMAGE }}:latest
+          cache-to: type=inline
       
