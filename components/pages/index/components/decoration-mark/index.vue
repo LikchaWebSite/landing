@@ -9,7 +9,7 @@
     
     <Icon
       icon="spa"
-      :size="40"
+      :size="45"
       color="#BB7F5B"
       :class="$style.icon"
     />

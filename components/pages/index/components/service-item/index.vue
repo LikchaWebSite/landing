@@ -1,8 +1,10 @@
 <template>
   <article :class="$style.container">
     <NuxtImg
+      preload
       :src="img"
       :alt="title"
+      placeholder
       fit="cover"
     />
 

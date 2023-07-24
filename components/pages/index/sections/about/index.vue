@@ -5,8 +5,10 @@
         <div :class="$style.side">
           <AosContainer animation="fade-right">
             <NuxtImg
-              :src="profileImage"
+              preload
               fit="cover"
+              placeholder
+              :src="profileImage"
               :class="$style.image"
             />
           </AosContainer>

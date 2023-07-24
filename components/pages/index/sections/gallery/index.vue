@@ -18,6 +18,8 @@
         >
           <NuxtImg
             :src="image"
+            :preload="true"
+            placeholder
             :class="$style.image"
           />
         </swiper-slide>
@@ -57,6 +59,9 @@ onMounted(() => {
 
   // @ts-expect-error
   swiper.value?.initialize()
+
+  // console.log(swiper.value.swiper.params.slidesPerView)
+  
 })
 </script>
 

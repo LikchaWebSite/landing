@@ -19,6 +19,7 @@
   position: sticky;
   top: 30px;
   max-width: 315px;
+  width: 100%;
 }
 
 .content {

@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   offset: number
 }>()
 
@@ -26,7 +26,7 @@ const callback: IntersectionObserverCallback = function ([{ isIntersecting }], o
 onMounted(() => {
   const observer = new IntersectionObserver(callback, {
     threshold: 0.1,
-    rootMargin: '100px 0px'
+    rootMargin: `${props.offset}px 0px`
   })
 
   if (container.value) {

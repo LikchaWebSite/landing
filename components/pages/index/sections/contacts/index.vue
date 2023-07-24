@@ -44,7 +44,7 @@
         </Container>
       </div>
       <div :class="$style.mapWrapper">
-        <LazyRender :offset="200">
+        <LazyRender :offset="500">
           <MapScript />
         </LazyRender>
       </div>
