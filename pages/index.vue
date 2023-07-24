@@ -199,12 +199,12 @@ const gallery = [
 ]
 
 const portfolio = [
-  'images/portfolio/1.jpg',
-  'images/portfolio/2.jpg',
-  'images/portfolio/3.jpg',
-  'images/portfolio/4.jpg',
-  'images/portfolio/5.jpg',
-  'images/portfolio/6.jpg'
+  'images/portfolio/1.webp',
+  'images/portfolio/2.webp',
+  'images/portfolio/3.webp',
+  'images/portfolio/4.webp',
+  'images/portfolio/5.webp',
+  'images/portfolio/6.webp'
 ]
 
 const contacts: ContactItem[] = [
