@@ -20,7 +20,7 @@ jobs:
         with:
           context: .
           tags: ${{ vars.DOCKERHUB_USER }}/${{ vars.DOCKER_IMAGE }}
-          build-args: MAP_URL='${{ vars.MAP_URL }}',METRIKA_STRING='${{ vars.METRIKA_STRING }}'
+          build-args: MAP_URL=${{ vars.MAP_URL }},METRIKA_STRING=${{ vars.METRIKA_STRING }}
           push: true
           cache-from: type=registry,ref=${{ vars.DOCKERHUB_USER }}/${{ vars.DOCKER_IMAGE }}:latest
           cache-to: type=inline
