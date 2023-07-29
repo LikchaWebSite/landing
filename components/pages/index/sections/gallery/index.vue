@@ -18,6 +18,7 @@
         >
           <NuxtImg
             :src="image"
+            alt="Фотография"
             :preload="true"
             placeholder
             :class="$style.image"

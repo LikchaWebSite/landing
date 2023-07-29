@@ -14,6 +14,10 @@ import AsideNavigation from '@/components/common/aside-navigation/index.vue'
 import { MarkdownNode } from '@nuxt/content/dist/runtime/types'
 import { AsideLink } from 'components/common/aside-navigation/types'
 
+definePageMeta({
+  layout: 'empty',
+})
+
 const { currentRoute } = useRouter()
 
 const { data } = await useAsyncData(queryContent(currentRoute.value.path).findOne)

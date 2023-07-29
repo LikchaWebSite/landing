@@ -7,6 +7,7 @@
       :class="$style.header"
       @burger-button-click="handleAsideMenuToggle"
     />
+
     <main :class="$style.main">
       <Hero
         id="hero"
@@ -147,7 +148,7 @@ const services: ServiceItem[] = [
     description: 'Как классическая музыка - образцовое ручное произведение, золотой фонд массажной культуры. Техники классического массажа сочетают глубину, содержательность, идейную значительность с совершенством формы.',
     duration: 1,
     price: 1700,
-    href: 'https://n947122.yclients.com/',
+    href: 'n947122.yclients.com',
   },
   {
     img: 'images/services/2.webp',
@@ -155,7 +156,7 @@ const services: ServiceItem[] = [
     description: 'Время замедляется, а сила возрастает. Неспешная и глубокая прогулка рук вдоль линий тела, напоминающая омовение песчаных берегов острова волнами океана.',
     duration: 1,
     price: 1700,
-    href: 'https://n947124.yclients.com/',
+    href: 'n947124.yclients.com',
   },
   {
     img: 'images/services/3.webp',
@@ -163,7 +164,7 @@ const services: ServiceItem[] = [
     description: 'Антицеллюлитный массаж - беспощадно (при большом желании). При маленьком желании – просто горячо. У нас цель - организовать приток крови к подкожно-жировой клетчатке. Мы к этой цели быстро и верно, широко шагая!',
     duration: 1,
     price: 2000,
-    href: 'https://n946783.yclients.com/',
+    href: 'n946783.yclients.com',
   },
   {
     img: 'images/services/4.webp',
@@ -171,7 +172,7 @@ const services: ServiceItem[] = [
     description: 'Спортивный массаж - это сильно. Он и перед, и после, и вместо тренировки. Как в боях – правил в нем нет. Ограничений по использованию определенной техники тоже: в ход идут локти и кулаки. Разбиваем забитое, выжимаем зажатое.',
     duration: 1,
     price: 1700,
-    href: 'https://n947127.yclients.com/',
+    href: 'n947127.yclients.com',
   },
   {
     img: 'images/services/5.webp',
@@ -179,7 +180,7 @@ const services: ServiceItem[] = [
     description: 'Массаж лица - скульптурно. Мимическим мышцам тоже нужна тренировка, чтобы быть в тонусе. В классическом понимании - боремся с морщинами, предотвращаем их появление.',
     duration: 1,
     price: 1700,
-    href: 'https://n947130.yclients.com/',
+    href: 'n947130.yclients.com',
   },
   {
     img: 'images/services/6.webp',
@@ -187,7 +188,7 @@ const services: ServiceItem[] = [
     description: 'Релакс массаж - это медленно. Это от поверхностного – к недрам. Это чутко и неуловимо. Тело плавится под теплыми движениями рук, а разум отправляется бороздить просторы безграничного.',
     duration: 1,
     price: 1700,
-    href: 'https://n947132.yclients.com/',
+    href: 'n947132.yclients.com',
   },
 ]
 

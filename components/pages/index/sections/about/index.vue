@@ -8,6 +8,7 @@
               preload
               fit="cover"
               placeholder
+              alt="Фотография Анжелики"
               :src="profileImage"
               :class="$style.image"
             />

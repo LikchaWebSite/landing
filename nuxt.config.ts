@@ -11,7 +11,6 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'Volokut – комната массажных дел на набережной реки Мойки',
       htmlAttrs: {
         lang: 'ru'
       },
