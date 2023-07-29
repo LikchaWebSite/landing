@@ -14,6 +14,12 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'ru'
       },
+      meta: [
+        {
+          name: 'google-site-verification',
+          content: 'SPcWI_AN3rtBV1w5luY1htJ1Z1HwibB0hxvo9yREnew',
+        }
+      ],
       script: [
         {
           type: 'text/javascript',
