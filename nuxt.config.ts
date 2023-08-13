@@ -7,7 +7,6 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       mapUrl: process.env.MAP_URL,
-      metrikaString: process.env.METRIKA_STRING,
     },
   },
   app: {
@@ -24,7 +23,6 @@ export default defineNuxtConfig({
       script: [
         {
           type: 'text/javascript',
-          fetchpriority: 'low',
           innerHTML: process.env.METRIKA_STRING,
           async: true,
         },
