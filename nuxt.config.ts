@@ -4,6 +4,13 @@ const customTags = [
 ]
 
 export default defineNuxtConfig({
+  ssr: true,
+  generate: {
+    routes: [
+      '/',
+      '/policy'
+    ]
+  },
   runtimeConfig: {
     public: {
       mapUrl: process.env.MAP_URL,
