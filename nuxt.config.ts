@@ -54,6 +54,10 @@ export default defineNuxtConfig({
           rel: 'manifest',
           href: '/site.webmanifest',
         },
+        {
+          rel: 'canonical',
+          href: 'https://www.volokut.ru',
+        },
       ],
     }
   },

@@ -8,9 +8,9 @@
           :class="$style.title"
         />
 
-        <span :class="$style.subtitle">
+        <h1 :class="$style.subtitle">
           Комната массажных дел на&nbsp;набережной Мойки
-        </span>
+        </h1>
 
         <Button
           :href="ctaLink"
