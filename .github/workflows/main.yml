@@ -24,6 +24,8 @@ jobs:
           build-args: |
             MAP_URL=${{ vars.MAP_URL }}
             METRIKA_STRING=${{ vars.METRIKA_STRING }}
+            GOOGLE_VERIFICATION=${{ vars.GOOGLE_VERIFICATION }}
+            YANDEX_VERIFICATION=${{ vars.YANDEX_VERIFICATION }}
           cache-from: type=registry,ref=${{ vars.DOCKERHUB_USER }}/${{ vars.DOCKER_IMAGE }}:latest
           cache-to: type=inline
       

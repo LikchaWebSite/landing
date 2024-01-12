@@ -23,9 +23,13 @@ export default defineNuxtConfig({
       },
       meta: [
         {
+          name: 'yandex-verification',
+          content: process.env.YANDEX_VERIFICATION,
+        },
+        {
           name: 'google-site-verification',
-          content: 'SPcWI_AN3rtBV1w5luY1htJ1Z1HwibB0hxvo9yREnew',
-        }
+          content: process.env.GOOGLE_VERIFICATION,
+        },
       ],
       script: [
         {
