@@ -22,7 +22,7 @@
               </SectionTitle>
 
               <span :class="$style.subtitle">
-                в массаже 2 года.
+                в массаже 3 года.
               </span>
 
               <p :class="$style.text">
