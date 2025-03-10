@@ -9,7 +9,7 @@
     <Container :class="$style.infoWrapper">
       <div :class="$style.infoContainer">
         <span :class="$style.info">
-          © 2023 «Volokut». Все права защищены.
+          © {{ currentYear }} «Volokut». Все права защищены.
         </span>
 
         <a
@@ -67,6 +67,8 @@ type Props = {
 withDefaults(defineProps<Props>(), {
   links: () => [],
 })
+
+const currentYear = (new Date()).getFullYear()
 </script>
 
 <style module src="./styles.module.css" />
