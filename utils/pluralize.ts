@@ -3,10 +3,14 @@ export const pluralize = (count: number, variants: string[]): string => {
 
   const teen = count > 10 && count < 20
   const endsWithOne = count % 10 === 1
+  const isFloat = !Number.isInteger(count)
   const choicesLength = variants.length
 
   if (count === 0) {
     chosenIndex = 0
+  }
+  else if (isFloat) {
+    chosenIndex = 2
   }
   else if (choicesLength < 4) {
     chosenIndex = (!teen && endsWithOne) ? 1 : 2

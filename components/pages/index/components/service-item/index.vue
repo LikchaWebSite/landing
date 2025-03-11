@@ -16,9 +16,15 @@
       {{ description }}
     </p>
 
-    <span :class="$style.price">
-      {{ durationText }} – {{ price }}₽
-    </span>
+    <div :class="$style.pricesBlock">
+      <span
+        v-for="({price, duration}, index) in prices"
+        :key="index"
+        :class="$style.price"
+      >
+        {{ pluralizeDuration(duration) }} – {{ price }}₽
+      </span>
+    </div>
 
     <Button
       color="black"
@@ -38,23 +44,23 @@ export type ServiceItem = {
   img: string
   title: string
   description: string
-  duration: number
-  price: number
+  prices: {
+    price: number;
+    duration: number;
+  }[]
   href: string
 }
 
-const props = defineProps<ServiceItem>()
+const variants = [
+  'часов',
+  'час',
+  'часа',
+  'часов',
+]
 
-const durationText = computed(() => {
-  const variants = [
-    'часов',
-    'час',
-    'часа',
-    'часов',
-  ]
+defineProps<ServiceItem>()
 
-  return pluralizeWithCount(props.duration, variants)
-})
+const pluralizeDuration = (duration: number) => pluralizeWithCount(duration, variants)
 </script>
 
-<style module src="./styles.module.css" />~/utils/pluralize
+<style module src="./styles.module.css" />

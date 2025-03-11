@@ -20,8 +20,7 @@
             :img="item.img"
             :title="item.title"
             :description="item.description"
-            :duration="item.duration"
-            :price="item.price"
+            :prices="item.prices"
             :href="item.href"
           />
         </AosContainer>
