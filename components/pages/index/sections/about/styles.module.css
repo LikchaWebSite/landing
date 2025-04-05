@@ -13,12 +13,17 @@
 
 .side {
   height: 100%;
+  order: 1;
 }
+
+.wrapper.reversed .side:last-child {
+  order: -1;
+}
+
 
 .image {
   position: sticky;
   top: 30px;
-  max-width: 315px;
   width: 100%;
 }
 
@@ -44,9 +49,14 @@
   line-height: 150%;
 }
 
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
 @media screen and (max-width: 768px) {
   .section {
-    padding: 0 0 50px;
+    padding: 15px 0 50px;
   }
 
   .wrapper {
@@ -62,5 +72,9 @@
 
   .image {
     max-width: 100%;
+  }
+
+  .wrapper.reversed .side:last-child {
+    order: 1;
   }
 }

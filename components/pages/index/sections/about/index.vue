@@ -1,7 +1,7 @@
 <template>
   <section :class="$style.section">
     <Container>
-      <div :class="$style.wrapper">
+      <div :class="[$style.wrapper, reversed ? $style.reversed : '']">
         <div :class="$style.side">
           <AosContainer animation="fade-right">
             <NuxtImg
@@ -14,23 +14,19 @@
             />
           </AosContainer>
         </div>
-        <div :class="$style.side">
+        <div :class="[$style.side, $style.sticky]">
           <AosContainer animation="fade-left">
             <div :class="$style.content">
               <SectionTitle color="white">
-                Я - Лика
+                {{ title }}
               </SectionTitle>
 
               <span :class="$style.subtitle">
-                в массаже 3 года.
+                в массаже {{ pluralizedExperience }}.
               </span>
 
               <p :class="$style.text">
-                Мой массаж – обволакивающий. Это самое точное слово для описания того, как я взаимодействую с каждой фиброй тела.
-                <br><br>
-                В прошлом - на серьезном занималась баскетболом, что отличает мой массаж силой крупных рычагов и быстротой слаженных движений, когда нужно.
-                <br><br>
-                В том же прошлом окончила музыкальную школу по классу фортепиано, что одаривает мой массаж маневренностью и чуткостью мелкой моторики.
+                <slot></slot>
               </p>
             </div>
           </AosContainer>
@@ -45,9 +41,22 @@ import AosContainer from '@/components/common/aos-container/index.vue'
 import SectionTitle from '@/components/pages/index/components/section-title/index.vue'
 import Container from '@/components/common/container/index.vue'
 
-defineProps<{
+const props = defineProps<{
+  imageMaxWidth?: number
+  title: string
+  reversed?: boolean
+  experience: number
   profileImage: string
 }>()
+
+const variants = [
+  'годов',
+  'год',
+  'года',
+  'годов',
+]
+
+const pluralizedExperience = computed(() => pluralizeWithCount(props.experience, variants))
 </script>
 
 <style module src="./styles.module.css" />
