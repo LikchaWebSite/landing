@@ -22,7 +22,7 @@
         :key="index"
         :class="$style.price"
       >
-        {{ pluralizeDuration(duration) }} – {{ price }}₽
+        {{ pluralizeDuration(duration) }} – от {{ price }}₽
       </span>
     </div>
 
