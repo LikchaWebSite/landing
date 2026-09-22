@@ -8,7 +8,7 @@
               preload
               fit="cover"
               placeholder
-              alt="Фотография Анжелики"
+              alt="Фотография мастера"
               :src="profileImage"
               :class="$style.image"
             />
@@ -22,7 +22,7 @@
               </SectionTitle>
 
               <span :class="$style.subtitle">
-                в массаже {{ pluralizedExperience }}.
+                в массаже {{ pluralizedExperience }}
               </span>
 
               <p :class="$style.text">
@@ -50,10 +50,10 @@ const props = defineProps<{
 }>()
 
 const variants = [
-  'годов',
+  'лет',
   'год',
   'года',
-  'годов',
+  'лет',
 ]
 
 const pluralizedExperience = computed(() => pluralizeWithCount(props.experience, variants))
