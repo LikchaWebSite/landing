@@ -3,6 +3,8 @@
 FROM node:22-alpine AS deps
 WORKDIR /usr/src/app
 
+RUN npm install -g npm@11
+
 COPY package.json package-lock.json ./
 
 # Кэш npm монтируется между сборками => повторные сборки быстрее
