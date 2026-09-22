@@ -1,3 +1,5 @@
+import { defineNuxtConfig } from "nuxt/config"
+
 const customTags = [
   'swiper-container',
   'swiper-slide',
@@ -10,6 +12,9 @@ export default defineNuxtConfig({
       '/',
       '/policy'
     ]
+  },
+  future: {
+    compatibilityVersion: 4,
   },
   runtimeConfig: {
     public: {
@@ -85,11 +90,10 @@ export default defineNuxtConfig({
     }
   },
   modules: [
-    '@nuxt/image',
     '@nuxt/content',
-    '@pinia/nuxt',
     '@nuxtjs/google-fonts',
     '@nuxtjs/eslint-module',
+    '@nuxt/image',
   ],
   css: [
     'normalize-css/normalize.css',
