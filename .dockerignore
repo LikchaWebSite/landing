@@ -1,5 +1,22 @@
+# Зависимости и артефакты сборки
 node_modules/
 .nuxt
 .output
+dist
+coverage
+
+# Git / CI
 .git
 .gitignore
+.gitlab-ci.yml
+
+# Секреты и локальные конфиги
+.env
+.env.*
+!.env.example
+
+# Прочее
+*.log
+npm-debug.log*
+.DS_Store
+README.md
