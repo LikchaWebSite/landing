@@ -92,11 +92,10 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     '@nuxtjs/google-fonts',
-    '@nuxtjs/eslint-module',
     '@nuxt/image',
   ],
   css: [
-    'normalize-css/normalize.css',
+    'normalize.css/normalize.css',
     'aos/dist/aos.css',
     '@/assets/styles/fonts.css',
     '@/assets/styles/variables.css',
