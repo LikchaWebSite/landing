@@ -1,13 +1,23 @@
 # syntax=docker/dockerfile:1
 
+# ---------- Стадия 1: зависимости ----------
+# Только установка зависимостей с кэшированием npm.
+# Отдельная стадия, чтобы изменение исходников не перекачивало пакеты заново.
 FROM node:22-alpine AS deps
 WORKDIR /usr/src/app
+
+# npm 10 (из node:22-alpine) падает с EBADPLATFORM на биндингах @oxc-parser,
+# которые тянет nuxt. Поднимаем npm до 11 — он корректно пропускает чужие
+# платформы и соответствует локальной среде (Node 24 → npm 11).
+RUN npm install -g npm@11
 
 COPY package.json package-lock.json ./
 
 # Кэш npm монтируется между сборками => повторные сборки быстрее
 RUN --mount=type=cache,target=/root/.npm npm ci
 
+# ---------- Стадия 2: сборка ----------
+# Берём зависимости из deps и собираем продакшн-вывод в .output
 FROM deps AS build
 
 # Переменные окружения, запекаемые в сборку (meta-теги/скрипты в head)
@@ -26,6 +36,8 @@ COPY . .
 
 RUN npm run build
 
+# ---------- Стадия 3: рантайм ----------
+# Лёгкий образ: только .output + runtime-переменные, без тулчейна и исходников
 FROM node:22-alpine AS runtime
 
 ENV NODE_ENV=production

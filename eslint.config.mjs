@@ -1,5 +1,5 @@
 
-import { globalIgnores } from 'eslint/config';
+import { globalIgnores } from 'eslint/config'
 import pluginVue from 'eslint-plugin-vue'
 import { withVueTs, vueTsConfigs } from '@vue/eslint-config-typescript'
 
@@ -12,9 +12,9 @@ export default withVueTs(
       'vue/no-unused-vars': 'warn',
       'comma-style': ['error', 'last'],
       'vue/operator-linebreak': ['error', 'before'],
-      "@typescript-eslint/no-unused-vars": [
-        "error",
-        { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
       ],
       'vue/first-attribute-linebreak': [
         'error',

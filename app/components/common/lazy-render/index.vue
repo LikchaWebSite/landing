@@ -15,7 +15,9 @@ const props = defineProps<{
 const container = ref<HTMLDivElement | null>(null)
 const shouldRender = ref(false)
 
-const callback: IntersectionObserverCallback = function ([{ isIntersecting }], observer) {
+const callback: IntersectionObserverCallback = function ([entry], observer) {
+  const isIntersecting = Boolean(entry?.isIntersecting)
+
   shouldRender.value = isIntersecting
 
   if (isIntersecting) {

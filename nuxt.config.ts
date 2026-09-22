@@ -1,4 +1,4 @@
-import { defineNuxtConfig } from "nuxt/config"
+import { defineNuxtConfig } from 'nuxt/config'
 
 const customTags = [
   'swiper-container',
@@ -7,12 +7,6 @@ const customTags = [
 
 export default defineNuxtConfig({
   ssr: true,
-  generate: {
-    routes: [
-      '/',
-      '/policy'
-    ]
-  },
   future: {
     compatibilityVersion: 4,
   },
@@ -39,8 +33,8 @@ export default defineNuxtConfig({
       script: [
         {
           type: 'text/javascript',
-          innerHTML: process.env.METRIKA_STRING,
-          async: true,
+          innerHTML: process.env.METRIKA_STRING ?? '',
+          async: undefined
         },
       ],
       link: [
@@ -70,28 +64,12 @@ export default defineNuxtConfig({
       ],
     }
   },
-  googleFonts: {
-    preload: true,
-    display: 'swap',
-    text: 'Привет мир!',
-    families: {
-      Roboto: {
-        wght: [
-          400,
-          500,
-          700,
-        ],
-      },
-    },
-  },
   vue: {
     compilerOptions: {
       isCustomElement: (tag) => customTags.includes(tag)
     }
   },
   modules: [
-    '@nuxt/content',
-    '@nuxtjs/google-fonts',
     '@nuxt/image',
   ],
   css: [
