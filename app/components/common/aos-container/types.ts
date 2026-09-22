@@ -1,4 +1,4 @@
-import { anchorPlacementOptions, easingOptions } from 'aos'
+import type { anchorPlacementOptions, easingOptions } from 'aos'
 
 export type FadeAnimation = 'fade' | 'fade-up' | 'fade-down' | 'fade-left' | 'fade-right' | 'fade-up-right' | 'fade-up-left' | 'fade-down-right' | 'fade-down-left'
 

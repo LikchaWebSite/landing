@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import { Animation, Easing, AnchorPlacement } from './types'
+import type { Animation, Easing, AnchorPlacement } from './types'
 
 type Props = {
   animation: Animation
@@ -37,3 +37,13 @@ withDefaults(defineProps<Props>(), {
   delay: 0,
 })
 </script>
+
+<style>
+@media (max-width: 768px) {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition-property: none !important;
+  }
+}
+</style>

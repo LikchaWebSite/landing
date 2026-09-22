@@ -33,7 +33,7 @@
 import AosContainer from '@/components/common/aos-container/index.vue'
 import Container from '@/components/common/container/index.vue'
 import SectionTitle from '@/components/pages/index/components/section-title/index.vue'
-import ServiceItemComponent, { ServiceItem } from '@/components/pages/index/components/service-item/index.vue'
+import ServiceItemComponent, { type ServiceItem } from '@/components/pages/index/components/service-item/index.vue'
 
 defineProps<{
   services: ServiceItem[]
